@@ -1,5 +1,5 @@
 // JS 문자열
-let str = 'hello';
+// let str = 'hello';
 
 // TS 문자열
 const str1: string = 'hello';
@@ -19,7 +19,7 @@ let person: object = {
     name: 'capt',
     age: 100,
 };
-let person2: {name: string, age: number} = {
+let person2: { name: string, age: number } = {
     name: 'capt',
     age: 100,
 }
