@@ -37,3 +37,39 @@ interface Dropdown1<T> {
     value: T;
     selected: boolean;
 }
+
+
+// 제네릭 타입 제한
+function logText4<T>(text: T[]): T[] {
+    console.log(text.length)
+    return text
+}
+
+logText4(['hi', '10'])
+
+
+// 제네릭 타입 제한2 - 정의된 타입 이용하기
+interface LengthType {
+    length: number;
+}
+function logText5<T extends LengthType>(text: T): T {
+    console.log(text.length)
+    return text
+}
+
+logText5({ length: 10 })
+
+// 제네릭 타입 제한3 - keyof
+interface ShoppingItem {
+    name: string;
+    price: number;
+    stock: number;
+}
+
+function getShoppingItemOption<T extends keyof ShoppingItem>(itemOption: T): T {
+    return itemOption
+}
+
+// getShoppingItemOption(10);
+// getShoppingItemOption<string>('a');
+getShoppingItemOption("name")
