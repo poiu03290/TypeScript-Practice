@@ -1,4 +1,4 @@
-const emails = [
+const emails: { value: string, selected: boolean }[] = [
   { value: 'naver.com', selected: true },
   { value: 'gmail.com', selected: false },
   { value: 'hanmail.net', selected: false },
