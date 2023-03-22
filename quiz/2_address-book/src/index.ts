@@ -10,10 +10,7 @@ interface Contact {
   phones: PhoneNumberDictionary;
 }
 
-// api
-// TODO: 아래 함수의 반환 타입을 지정해보세요.
 function fetchContacts() {
-  // TODO: 아래 변수의 타입을 지정해보세요.
   const contacts = [
     {
       name: 'Tony',
